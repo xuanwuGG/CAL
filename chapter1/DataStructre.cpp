@@ -42,6 +42,10 @@ bool ListDelete(SqList &L, int i, ElemType &e){
         cout<<"删除位置不合法"<<endl;
         return false;
     }
+    if(L.length == 0){
+        cout<<"表空"<<endl;
+        return false;
+    }
     e = L.data[i-1];
     for(int j = i; j < L.length; j++){
         L.data[j-1] = L.data[j];
@@ -67,4 +71,12 @@ void DestroyList(SqList &L){
     for(int i = 0; i < MaxSize; i++){
         L.data[i] = 0;
     }
+}
+
+int min(int a, int b){
+    return a < b ? a : b;
+}
+
+int max(int a, int b){
+    return a > b ? a : b;
 }

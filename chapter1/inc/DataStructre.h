@@ -23,4 +23,6 @@ bool ListDelete(SqList &L, int i, ElemType &e);
 void PrintList(SqList L);
 void IsEmpty(SqList &L);
 void DestroyList(SqList &L);
+int min(int a,int b);
+int max(int a,int b);   
 #endif // DATA_STRUCTURE_H
